@@ -1,14 +1,13 @@
 import React, {useEffect, useState} from 'react'
 import axios from "axios"
-import { Link } from 'react-router-dom';
 
 export const BibleStudiesindex = () => {
 
 const [data, setBibleStudy] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:4000/biblestudies")
-    .then(response => setBibleStudy(response.data.Blogs))
+    axios.get("https://nubsuenr.onrender.com/biblestudy")
+    .then(response => setBibleStudy(response.data))
     .catch(err => console.log(err))
       
     },[])
@@ -29,15 +28,15 @@ const [data, setBibleStudy] = useState([]);
                       data.map(item => (
                         <div className="card_content">
                         <div className="card" >
-                            <Link href="" className="single">
                             <div className="card-body">
                            
                               <h5 className="card-title title"><b>{item.title}</b></h5>
                        
-                              <h6 className="card-subtitle mb-2 text-muted date">{item.date}</h6>
-                              <p className="card-text snippet">{item.snippet}</p>
+                              <h6 className="card-subtitle mb-2"style={{color:'white'}} >{item.date}</h6>
+                              <p className="card-text snippet" style={{color:'white'}}>{item.snippet}</p>
+                              {/* eslint-disable-next-line */}
+                              <p className="card-text snippet" style={{color:'white'}}>To read or download. Click <a href={item.link} target="_blank" style={{color:'brown', textDecoration:"none"}}> here</a></p>
                             </div>
-                           </Link>
                       </div>
                     </div>
                       ))
