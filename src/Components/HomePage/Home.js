@@ -22,7 +22,8 @@ function Home() {
             <h1 style={{fontSize: '4rem', textAlign: 'center' }}><b>NUBS UENR</b></h1>
             <p style={{color:'ghostwhite'}}>Empowered... For Action!!!</p>
             <button className="btn btn-outline-danger" style={{width:'100px', borderRadius: '20px'}}>
-                  <Link href="#" target="_self" style={{textDecoration:'none', color:'white'}}>Join Us</Link>              
+                {/* eslint-disable-next-line */}
+            <a style={{textDecoration: 'none', color:'white'}} href="https://forms.gle/5KtCo7MWdT72QJyt9" target="_blank">Join</a>              
             </button>
         </div>    
       </div>
