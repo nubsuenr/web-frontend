@@ -46,9 +46,9 @@ function Nav() {
             </li>
         </Link>    
         
-        <Link to='/gallery' style={{textDecoration:'none'}} class="nav-link">
-        <li><i class="fa-solid fa-image"></i>
-            <p>Gallery</p>
+        <Link to='/e-library' style={{textDecoration:'none'}} class="nav-link">
+        <li><i class="fa-solid fa-book-open"></i>
+            <p>E-library</p>
             </li>
         </Link>
         
@@ -59,7 +59,7 @@ function Nav() {
         </Link>    
         
         <Link to='/media' style={{textDecoration:'none'}} class="nav-link">
-        <li><i class="fa-solid fa-book-open"></i>
+        <li><i class="fa-solid fa-image"></i>
             <p>Media</p>
             </li>
         </Link>    

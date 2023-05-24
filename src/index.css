@@ -645,4 +645,10 @@ nav ul li.active{
 .dashboard{
   background-color: #0004ff;
 }
+.searchable-header{
+  margin-bottom: 15px;
+}
 
+.searchable-header ::placeholder{
+  opacity: 0.5;
+}

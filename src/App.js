@@ -13,6 +13,7 @@ import { BibleStudiesindex } from "./Components/BibleStudiesPage/BibleStudiesind
 import { PrayerIndex } from "./Components/PrayersPage/PrayerIndex";
 import { SermonIndex } from "./Components/SermonsPage/SermonIndex";
 import { EventsIndex } from "./Components/OtherEventsPage/EventsIndex";
+import { LibraryIndex } from "./Components/LibraryPage/LibraryIndex";
 
 
 
@@ -64,6 +65,9 @@ function App() {
       </Route>
       <Route path="/events">
         <EventsIndex />
+      </Route>
+      <Route path="/e-library">
+        <LibraryIndex />
       </Route>
       </Switch>
     </div>
