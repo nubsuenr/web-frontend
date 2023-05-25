@@ -2,6 +2,9 @@ import React, {useEffect, useState} from 'react'
 import axios from "axios"
 
 export const LibraryIndex = () => {
+
+    const [isLoading, setIsLoading] = useState(true);
+
     const [searchValue, setSearchValue] = useState("");
     const handleInputChange = (event) => {
         setSearchValue(event.target.value.toLowerCase());
@@ -13,6 +16,10 @@ export const LibraryIndex = () => {
         axios.get("https://nubsuenr.onrender.com/library")
         .then(response => setLibrary(response.data))
         .catch(err => console.log(err))
+
+        setTimeout(() => {
+            setIsLoading(false);
+          }, 2000); // Set the desired loading time in milliseconds
     },[])
 
     
@@ -33,7 +40,9 @@ export const LibraryIndex = () => {
                                 <th>Author</th>
                             </tr>
                         </thead>
-                        {
+                        {isLoading ? (
+                             <p style={{color:"white"}}>Loading...</p>
+                            ) : (
                             data.map(item => {
                                 const itemString = String(item);
                                 return(
@@ -44,7 +53,7 @@ export const LibraryIndex = () => {
                                 <td>{item.author_name}</td>
                             </tr>
                         </tbody>        
-                            )})
+                            )}))
                         }
                         
                     </table>

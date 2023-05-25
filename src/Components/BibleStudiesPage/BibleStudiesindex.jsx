@@ -2,14 +2,16 @@ import React, {useEffect, useState} from 'react'
 import axios from "axios"
 
 export const BibleStudiesindex = () => {
-
+const [isLoading, setIsLoading] = useState(true);
 const [data, setBibleStudy] = useState([]);
 
   useEffect(() => {
     axios.get("https://nubsuenr.onrender.com/biblestudy")
     .then(response => setBibleStudy(response.data))
     .catch(err => console.log(err))
-      
+       setTimeout(() => {
+            setIsLoading(false);
+          }, 2000); // Set the desired loading time in milliseconds
     },[])
 
   return (
@@ -24,7 +26,9 @@ const [data, setBibleStudy] = useState([]);
                 <h3>All Blogs</h3>
                   <div>
                   <ul>
-                    {
+                    {isLoading ? (
+                             <p style={{color:"white"}}>Loading...</p>
+                            ) : (
                       data.map(item => (
                         <div className="card_content">
                         <div className="card" >
@@ -39,7 +43,7 @@ const [data, setBibleStudy] = useState([]);
                             </div>
                       </div>
                     </div>
-                      ))
+                      )))
                     }
                   </ul>
                   </div>

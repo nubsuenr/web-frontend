@@ -27,6 +27,11 @@ export const MediaIndex = () => {
        </Link>
          </div>
         <div className='card'>
+       <Link to="/gallery" style={{textDecoration:'none',padding:'10px',color:'#565e68'}}>
+       <h3>Gallery</h3> 
+       </Link>
+         </div>
+        <div className='card'>
        <Link to="/events" style={{textDecoration:'none', color:'#565e68',padding:'10px'}}>
        <h3>Other Events</h3> 
        </Link>

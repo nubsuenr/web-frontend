@@ -17,12 +17,8 @@ export const Prayer = () => {
                 </div>
                 <button className="accordion">Send a prayer request</button>
                 <div class className="panel">
-                    <form method="post" action=''>
-                        <input type="text" placeholder="name" name='name' style={{marginTop:'10px'}} />
-                        <i>*Please you can choose to add your name or not.</i>
-                        <textarea cols="50" rows="30" placeholder="type your prayer request" name='message' required></textarea>
-                    </form>
-                    <button className="btn btn-success" style={{width:'100px'}}>Submit</button>
+                      {/* eslint-disable-next-line */}
+                   <p>Click <a href='https://forms.gle/DAwZ2QJxiRDjQCX2A' target='_blank'>Here</a> to send your prayer requests.</p>
                 </div>
             </div>
              </div>

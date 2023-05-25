@@ -1,38 +1,7 @@
-import React,{useState} from 'react'
+import React from 'react'
 
 export const Counselling = () => {
 
-    const [fullname, setFullName] = useState("");
-    const [worringmessage, setWorringMessage] = useState("");
-    const [message, setMessage] = useState("")
-    
-    let handleSubmit = async(e) => {
-        e.preventDefault();
-        try{
-            let res = await 
-            fetch("https://nubsuenr.onrender.com/postcounselling", {
-            method:"POST",
-            headers: {
-                'Content-Type': 'application/json'
-              },
-            body: JSON.stringify({
-                fullname:fullname,
-                worringmessage:worringmessage,
-            }),
-            });
-            
-            if(res.status === 200){
-                setFullName(fullname);
-                setWorringMessage(worringmessage)
-                console.log(fullname)
-                console.log(worringmessage)
-                setMessage("Message Sent Successfully")
-            }else{
-                setMessage("Message not sent")
-            }
-        }catch(err){
-            console.log(err)
-            }}
 
   return (
     <div className='container'>
@@ -47,17 +16,8 @@ export const Counselling = () => {
                 </div>
                 <button className="accordion">Write to Counsellors</button>
                 <div class className="panel">
-                    <form onSubmit={handleSubmit}>
-                        <input type="text" placeholder="name" value={fullname} style={{marginTop:'10px'}} onChange={(e) => setFullName(e.target.value)} />
-                        <i>*Please you can choose to add your name or not.</i>
-                        <textarea cols="50" rows="30" placeholder="type your request" value={worringmessage} onChange={(e) => setWorringMessage(e.target.value)} required></textarea>
-                        <button className="btn btn-success" style={{width:'100px'}} type='submit'>Submit</button>
-                        <div>
-                            {message ?
-                            <p>{message}</p>: null    
-                        }
-                        </div>
-                    </form>
+                      {/* eslint-disable-next-line */}
+                   <p>Click <a href='https://forms.gle/FSHqn5fMdcKKGHt26' target='_blank'>Here</a> to send your request</p>
                 </div>
             </div>
              </div>
