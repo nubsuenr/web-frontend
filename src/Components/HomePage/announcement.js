@@ -23,7 +23,7 @@ function Announcement(){
           <div className="row">
             <div className="col-md-12" style={{ marginTop: "10px" }}>
               <center>
-                <h1>Upcoming Events</h1>
+                <h1>Annoucement</h1>
               </center>
               {
                 isLoading ? (
@@ -38,6 +38,8 @@ function Announcement(){
                     <div>
                       <p style={{fontSize:'0.8rem' ,color:'white'}}>{item.description}</p>
                     </div>
+                    <br></br>
+                    <br></br>
                   </div>
                   ))
                 ) 
